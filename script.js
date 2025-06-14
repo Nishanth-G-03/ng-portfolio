@@ -9,6 +9,60 @@ const typed = new Typed(".auto-type", {
     cursorChar: "|"
   });
 
+//   Navigation bar Toggling
    function toggleMenu() {
     document.getElementById("nav-links").classList.toggle("active");
   }
+
+//   Certificates scrolling
+   const swiper = new Swiper(".certificate-swiper", {
+    loop: true,
+    spaceBetween: 30,
+    centeredSlides: true,
+    autoplay: {
+      delay: 3000,
+      disableOnInteraction: false,
+    },
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+    breakpoints: {
+      640: {
+        slidesPerView: 1,
+      },
+      768: {
+        slidesPerView: 2,
+      },
+      1024: {
+        slidesPerView: 3,
+      },
+    },
+  });
+
+//   Footer dynamic year
+document.getElementById("year").textContent = new Date().getFullYear();
+
+// Scroll up page
+ const scrollToTopBtn = document.getElementById("scrollToTopBtn");
+
+  window.addEventListener("scroll", () => {
+    if (window.scrollY > 300) {
+      scrollToTopBtn.style.opacity = "1";
+      scrollToTopBtn.style.visibility = "visible";
+    } else {
+      scrollToTopBtn.style.opacity = "0";
+      scrollToTopBtn.style.visibility = "hidden";
+    }
+  });
+
+  scrollToTopBtn.addEventListener("click", () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth"
+    });
+  });

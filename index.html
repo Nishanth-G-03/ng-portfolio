@@ -7,7 +7,10 @@
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
-
+    <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
     <link rel="stylesheet" href="./style.css">
 </head>
 <body>
@@ -19,8 +22,9 @@
                 <a href="#about">About</a>
                 <a href="#skills">Skills</a>
                 <a href="#projects">Projects</a>
-                <a href="#works">Works</a>
-                <a href="#education">Education</a>
+                <!-- <a href="#works">Works</a>
+                <a href="#education">Education</a> -->
+                <a href="#certificates">Certifications</a>
                 <a href="#contact">Contact</a>
             </nav>
         <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
@@ -159,20 +163,106 @@
 
 
     <!-- Personal Projects Section -->
-     <section id="projects">
-        <h2>My Projects</h2>
-        <!-- Project cards or list will go here -->
-    </section>
+     <section id="projects" class="projects-section">
+        <h2 class="section-title">Projects</h2>
+
+            <div class="projects-container">
+
+            <!-- Project Card 1 (Example/Placeholder) -->
+            <div class="project-card">
+            <div class="project-image">
+                <!-- Optional placeholder image -->
+                <img src="./images/pipe-vel-calculator.png" alt="Project 1 Screenshot">
+            </div>
+            <div class="project-info">
+                <h3>Pipe Velocity Calculator</h3>
+                <p>The Pipe Velocity Calculator is a utility tool developed to accurately calculate the fluid velocity in pipelines based on flow rate and pipe diameter. It plays a crucial role in designing and validating piping systems within pharmaceutical water treatment plants, where maintaining optimal velocity is essential to ensure laminar flow, prevent biofilm formation, and comply with GMP standards.</p>
+                <a href="https://nishanth-g-03.github.io/Pipe_Flow_Velocity_Calculator/" class="project-link" target="_blank">View Live</a>
+                <a href="https://github.com/Nishanth-G-03/Pipe_Flow_Velocity_Calculator.git" class="project-link" target="_blank">Source Code</a>
+            </div>
+            </div>
+
+    <!-- You can duplicate the above card to add more -->
+       
+  </div>
+</section>
 
     <!-- Work Experience Section -->
 
-    <!-- Education Section -->
+    <!-- Certification Section -->
+    <section id="certificates" class="certificates-section">
+        <h2 class="section-title">Certificates</h2>
+
+        <div class="swiper certificate-swiper">
+            <div class="swiper-wrapper">
+
+            <!-- Slide 1 -->
+            <div class="swiper-slide certificate-slide">
+                <img src="./images/100Dpython.PNG" alt="Python Certificate" />
+                <p> Completed From Udemy, 2025</p>
+            </div>
+
+            <!-- Slide 2 -->
+            <div class="swiper-slide certificate-slide">
+                <img src="./images/webDevBC.PNG" alt="Frontend Certificate" />
+                <p>Completed from Udemy, 2022</p>
+            </div>
+
+        <!-- Add more slides as needed -->
+            
+        </div>
+
+        <!-- Navigation arrows -->
+        <!-- <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div> -->
+
+        <!-- Pagination dots -->
+        <div class="swiper-pagination"></div>
+    </div>
+    </section>
 
     <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <h2 class="section-title">Get in Touch</h2>
+
+        <div class="contact-container">
+            <form class="contact-form">
+            <input type="text" name="name" placeholder="Your Name" required />
+            <input type="email" name="email" placeholder="Your Email" required />
+            <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+            <button type="submit">Send Message</button>
+            </form>
+            <div class="contact-socials">
+            <a href="mailto:nishanthpetroleum@gmail.com" target="_blank" title="Email">
+                <i class="devicon-google-plain colored"></i> Email
+            </a>
+            <a href="https://github.com/Nishanth-G-03" target="_blank" title="GitHub">
+                <i class="devicon-github-original colored"></i> GitHub
+            </a>
+            <a href="http://www.linkedin.com/in/nishanth-g-610125126" target="_blank" title="LinkedIn">
+                <i class="devicon-linkedin-plain colored"></i> LinkedIn
+            </a>
+            </div>
+
+            <p class="success-message" style="display: none; color: #4caf50;">Message sent successfully!</p>
+        </div>
+    </section>
 
     <!-- Footer Section -->
+    <footer class="site-footer">
+        <div class="footer-content">
+            <p>&copy; <span id="year"></span> Nishanth Ganesh. All rights reserved.</p>
+        </div>
+                
+    </footer>
+    <button id="scrollToTopBtn" title="Back to top">
+    ↑
+    </button>
+
+
 
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="./script.js"></script>
 
 </body>
