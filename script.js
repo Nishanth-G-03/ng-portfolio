@@ -71,13 +71,14 @@ document.getElementById("year").textContent = new Date().getFullYear();
   const form = document.getElementById("contact-form");
 
   form.addEventListener("submit", async (e) => {
-    
+    e.preventDefault();
 
     const formData = {
       name: document.getElementById("name").value,
       email: document.getElementById("email").value,
       message: document.getElementById("message").value,
     };
+      console.log(formData);
 
     try {
       const response = await fetch("https://contact-backend-f32m.onrender.com", {
@@ -97,5 +98,5 @@ document.getElementById("year").textContent = new Date().getFullYear();
     } catch (err) {
       alert("Error: " + err.message);
     }
-      e.preventDefault();
+      
   });
