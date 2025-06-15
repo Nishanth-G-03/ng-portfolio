@@ -73,10 +73,12 @@ document.getElementById("year").textContent = new Date().getFullYear();
   form.addEventListener("submit", async (e) => {
     e.preventDefault();
 
+    const formD= new FormData(form);
+
     const formData = {
-      name: document.getElementById("name").value,
-      email: document.getElementById("email").value,
-      message: document.getElementById("message").value,
+      name: formD.get("name"),
+      email: formD.get("email"),
+      message: formD.get("message"),
     };
       console.log(formData);
 
