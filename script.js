@@ -83,7 +83,7 @@ document.getElementById("year").textContent = new Date().getFullYear();
       console.log(formData);
 
     try {
-      const response = await fetch("https://contact-backend-f32m.onrender.com", {
+      const response = await fetch("https://contact-backend-f32m.onrender.com/send", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
