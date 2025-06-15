@@ -71,7 +71,7 @@ document.getElementById("year").textContent = new Date().getFullYear();
   const form = document.getElementById("contact-form");
 
   form.addEventListener("submit", async (e) => {
-    e.preventDefault();
+    
 
     const formData = {
       name: document.getElementById("name").value,
@@ -97,4 +97,5 @@ document.getElementById("year").textContent = new Date().getFullYear();
     } catch (err) {
       alert("Error: " + err.message);
     }
+      e.preventDefault();
   });
