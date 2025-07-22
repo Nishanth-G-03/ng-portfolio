@@ -216,6 +216,7 @@ body {
   background: #00ffe7;
   color: #000;
   box-shadow: 0 0 10px rgba(0, 255, 231, 0.6);
+    z-index:1000;
 }
 
 .primary-btn:hover {
@@ -228,6 +229,7 @@ body {
   background: transparent;
   border: 2px solid #00ffe7;
   color: #00ffe7;
+    z-index:1000;
 }
 
 .secondary-btn:hover {
